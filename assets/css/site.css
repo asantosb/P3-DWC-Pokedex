@@ -1,0 +1,160 @@
+body{
+    background-image: url("../img/fondo3.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: top;
+}
+
+.contenedor-form {
+    width:800vh;
+    max-width:500px;
+    height:800vh;
+    max-height:200px;
+    position:relative;
+    box-shadow:
+        2.4px 3.8px 3.6px rgba(0, 0, 0, 0.073),
+        6.6px 10.5px 10px rgba(0, 0, 0, 0.089),
+        16px 25.3px 24.1px rgba(0, 0, 0, 0.096),
+        53px 84px 80px rgba(0, 0, 0, 0.1);
+}
+
+.padding-form{
+    padding-top: 50px;
+}
+
+.form{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form button{
+    padding: .5em 1em;
+    border:none;
+    cursor: pointer;
+}
+  
+.form-container{
+    max-width:700px;
+    margin: 0 auto;
+}
+  
+.form-element {
+    display: block;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.btn-p{
+    background-color: #356ABC;
+    border-color: #F9F9F9;
+    color: #FFCD00;
+    border-radius: 23px;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    padding: 8px 26px;
+    text-shadow: none;
+    position: relative;
+}
+
+.btn-p:hover{
+    background-color: #FFCD00;
+    color: #356ABC;
+}
+
+.btn-p2{
+    background-color: #07f51a;
+    border-color: #F9F9F9;
+    color: #070707;
+    border-radius: 23px;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    padding: 8px 26px;
+    text-shadow: none;
+    position: relative;
+}
+
+.btn-p2:hover{
+    background-color: #f12501;
+    color: #f8f8f6;
+}
+
+.texto-form{
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+table {
+    width: 50%;
+    border: 1px solid #000;
+    margin-left: 300px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+tr:nth-child(even){
+    background-color: #b9b9b9;
+}
+
+tr:nth-child(odd) {
+    background-color: grey;
+}
+
+tr:hover {
+    background-color: yellow;
+    color: #356ABC;
+}
+
+th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #356ABC;
+  color: yellow;
+}
+
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+}
+
+/* Media-queries */
+/* XS */
+@media (min-width: 300px) {
+    table {
+        margin-left: 40px;
+    }
+}
+/* SM */
+@media (min-width: 576px) {
+    table {
+        margin-left: 60px;
+    }
+}
+/* MD */
+@media (min-width: 768px) { 
+    table {
+        margin-left: 150px;
+    }
+}
+/* LG */
+@media (min-width: 992px) { 
+    table {
+        margin-left: 230px;
+    }
+}
+/* XL */
+@media (min-width: 1200px) {
+    table {
+        margin-left: 280px;
+    }
+}
