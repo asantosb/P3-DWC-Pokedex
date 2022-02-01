@@ -70,11 +70,7 @@ function procesarRespuestaJSON(respuesta, id, nombre) {
         let idPokemon = $(this).data('code');
         let nombrePokemon = $(this).data('nombre');
         // Envío los datos por post al archivo PHP
-        $.post("action.php", { 
-            accion: 1,
-            idPokemon: idPokemon,
-            nombrePokemon: nombrePokemon
-        }, function (datos) {
+        $.post("action.php", { accion: 1, idPokemon: idPokemon, nombrePokemon: nombrePokemon }, function (datos) {
             document.getElementById("contenedor").innerHTML = datos;
         });
     });
@@ -82,18 +78,13 @@ function procesarRespuestaJSON(respuesta, id, nombre) {
 // Si pulso el boton 'Mostrar seleccionados', mando al action.php la accion 2(select) para mostrar la base de datos mediante una tabla
 $("#btn-seleccionados").click(function (event)  {
     event.preventDefault();
-    $.post("action.php", {
-        accion: 2
-    }, function (datos) {
+    $.post("action.php", { accion: 2 }, function (datos) {
         document.getElementById("contenedor").innerHTML = datos;
         // Si le doy click al botón borrar, mando a action.php la accion 3(delete) junto al id de pokemon
         $(".btn-borrar").on('click', function () {
             let idPokemon = $(this).data('code');
             // Envio los datos por post al archivo PHP
-            $.post("action.php", {
-                accion: 3,
-                idPokemon: idPokemon
-            }, function (datos) {
+            $.post("action.php", {accion: 3, idPokemon: idPokemon }, function (datos) {
                 document.getElementById("contenedor").innerHTML = datos;
             });
         });
