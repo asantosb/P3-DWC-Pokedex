@@ -38,7 +38,7 @@ function procesarRespuestaJSON(respuesta, id, nombre) {
             fila.insertCell().innerText = respuestaObjeto[i].type;
             fila.insertCell().innerHTML = `<button class="btn btn-p2 mt-2 mb-2 btn-opciones" data-code="${respuestaObjeto[i].id}" data-nombre="${respuestaObjeto[i].name.english}" data-operacion="insertar">Seleccionar</button>`;
             // Si el campo id está vacio y el campo nombre está relleno, busco por el nombre
-        } else if ((id == "") && respuestaObjeto[i].name.english.toLowerCase() == nombre.toLowerCase()) {
+        } else if ((id == "") && respuestaObjeto[i].name.english.toLowerCase().includes(nombre)) {
             var fila = tabla.insertRow();
             fila.insertCell().innerText = respuestaObjeto[i].id;
             fila.insertCell().innerText = respuestaObjeto[i].name.english;
@@ -53,7 +53,7 @@ function procesarRespuestaJSON(respuesta, id, nombre) {
             fila.insertCell().innerHTML = `<button class="btn btn-p2 mt-2 mb-2 btn-opciones"  data-code="${respuestaObjeto[i].id}" data-nombre="${respuestaObjeto[i].name.english}" data-operacion="insertar">Seleccionar</button>`;
             // Si el campo id y el campo nombre estan rellenos, busco por el campo nombre
         } else if ((id) && (nombre)) {
-            if (respuestaObjeto[i].name.english.toLowerCase() == nombre.toLowerCase()) {
+            if (respuestaObjeto[i].name.english.toLowerCase().includes(nombre)) {
                 var fila = tabla.insertRow();
                 fila.insertCell().innerText = respuestaObjeto[i].id;
                 fila.insertCell().innerText = respuestaObjeto[i].name.english;
